@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c7dhljnpkmu33"]
+
+[ext_resource type="Script" uid="uid://c5r2w47odd8lb" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://b0c344lmeasgn" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bhyq8uc3ehp72" path="res://Screenshot_2026-11-14_at_14.26.08-removebg-preview.png" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b74nm3qk01d7a" path="res://acorn.tscn" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://g0rjkpv82h0g" path="res://music.ogg" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://6ybknjtlta52" path="res://coin.ogg" id="6_7mycd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+
+[node name="Main" type="Node2D" unique_id=1481904680]
+script = ExtResource("1_h2yge")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=521536448]
+position = Vector2(515, 356)
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1973118336]
+texture = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2021333545]
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="ScoreLabel" type="Label" parent="Player" unique_id=1997565994]
+offset_left = -509.0
+offset_top = -317.0
+offset_right = -307.0
+offset_bottom = -294.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=496475468]
+
+[node name="Acorn" parent="." unique_id=175762396 instance=ExtResource("4_1bvp3")]
+position = Vector2(854, 623)
+
+[node name="Acorn11" parent="." unique_id=885358823 instance=ExtResource("4_1bvp3")]
+position = Vector2(337, 664)
+
+[node name="Acorn12" parent="." unique_id=1077428206 instance=ExtResource("4_1bvp3")]
+position = Vector2(618, 687)
+
+[node name="Acorn2" parent="." unique_id=416040081 instance=ExtResource("4_1bvp3")]
+position = Vector2(772, 370)
+
+[node name="Acorn3" parent="." unique_id=1770710576 instance=ExtResource("4_1bvp3")]
+position = Vector2(276, -43)
+
+[node name="Acorn4" parent="." unique_id=1709352499 instance=ExtResource("4_1bvp3")]
+position = Vector2(686, -88)
+
+[node name="Acorn5" parent="." unique_id=2040491159 instance=ExtResource("4_1bvp3")]
+position = Vector2(101, 589)
+
+[node name="Acorn6" parent="." unique_id=1841946006 instance=ExtResource("4_1bvp3")]
+position = Vector2(56, 181)
+
+[node name="Acorn7" parent="." unique_id=269763636 instance=ExtResource("4_1bvp3")]
+position = Vector2(1086, 302)
+
+[node name="Acorn8" parent="." unique_id=971941229 instance=ExtResource("4_1bvp3")]
+position = Vector2(923, 28)
+
+[node name="Acorn9" parent="." unique_id=2125676751 instance=ExtResource("4_1bvp3")]
+position = Vector2(183, 299)
+
+[node name="Acorn10" parent="." unique_id=182634126 instance=ExtResource("4_1bvp3")]
+position = Vector2(449, 136)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1483155009]
+stream = ExtResource("5_lquwl")
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="." unique_id=660215377]
+stream = ExtResource("6_7mycd")
